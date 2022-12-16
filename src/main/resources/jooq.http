@@ -1,0 +1,81 @@
+### save new country
+POST http://localhost:8088/api/v1/countries
+Content-Type: application/json
+Accept: application/json
+
+
+{
+  "name": "Spain",
+  "governmentForm": "constitutional monarchy",
+  "population": 47000000,
+  "cities": [
+    {
+      "name": "Madrid"
+    },
+    {
+      "name": "Barcelona"
+    }
+  ]
+}
+
+
+
+### get country by id
+GET http://localhost:8088/api/v1/countries/6
+Accept: application/json
+
+
+
+### get all countries
+GET http://localhost:8088/api/v1/countries
+Accept: application/json
+
+
+
+### update country
+PUT http://localhost:8088/api/v1/countries
+Content-Type: application/json
+Accept: application/json
+
+
+{
+  "name": "Spain",
+  "governmentForm": "constitutional monarchy",
+  "population": 48000000,
+  "cities": [
+    {
+      "name": "Madrid"
+    },
+    {
+      "name": "Barcelona"
+    },
+    {
+      "name": "Alicante"
+    }
+  ]
+}
+
+
+
+### delete country
+DELETE http://localhost:8088/api/v1/countries/6
+Accept: application/json
+
+
+
+### save new city
+POST http://localhost:8088/api/v1/cities
+Content-Type: application/json
+Accept: application/json
+
+
+{
+  "name": "Valencia",
+  "countryId": 6
+}
+
+
+
+### delete city
+DELETE http://localhost:8088/api/v1/cities/15
+Accept: application/json
